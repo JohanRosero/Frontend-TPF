@@ -1,0 +1,13 @@
+<div>
+    <h1>Mis usuarios</h1>
+    <table>
+      <tbody>
+        <tr *ngFor="let usuario of usuarios">
+          <td>{{ usuario.id }}</td>
+          <td>{{ usuario.nombre }}</td>
+          <td>{{ usuario.email }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
