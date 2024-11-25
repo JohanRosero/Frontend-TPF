@@ -16,19 +16,12 @@
 
             <!-- Iconos flotantes -->
             <div class="position-absolute bottom-0 end-0 p-2">
-              <button class="btn btn-outline-warning m-1"   (click)="crearUsuario()" >
+             <!--  <button class="btn btn-outline-warning m-1"   (click)="crearUsuario()" >
                 <i class="bi bi-pencil-fill"></i>
-              </button>
-              <button class="btn btn-outline-danger m-1" (click)="getUsuarios()">
+              </button> -->
+              <button class="btn btn-outline-danger m-1" (click)="deleteUsuario(locales.id)">
                 <i class="bi bi-trash-fill"></i>
-              </button>
-              <div class="btn btn-outline-info" (click)="getUsuarios()">
-                <!-- <svg *ngIf="!locales.alquilado && locales.habilitado" class="text-info" width="16" height="16"
-                  fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12.726 0H10.5C8.044 0 6.7 1.25 6.7 3.3V5.3H4.5a.5.5 0 0 0-.5.5v3.1a.5.5 0 0 0 .5.5H6.7v8.3a.5.5 0 0 0 .5.5h3.2a.5.5 0 0 0 .5-.5V9.4h2.4a.5.5 0 0 0 .5-.5V5.8a.5.5 0 0 0-.5-.5H10.9V3.7c0-.6.1-.9.9-.9h1.9a.5.5 0 0 0 .5-.5V.5a.5.5 0 0 0-.5-.5z" />
-                </svg> -->
-              </div>
+              </button>             
             </div>
           </div>
         </div>
