@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row w-100">
+    <h1 class="pt-3 pb-3">Usuarios registrados</h1>
+
+    <!-- tarjeta-local.component.html -->
+    <div class="card m-1 position-relative" style="max-width: 400px;" *ngFor="let locales of usuarios; let i = index">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="../../../assets/programer.png" class="img-fluid rounded-start full-img programer pt-2" alt="Descripción de la imagen">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{ locales.name }}</h5>
+            <p class="card-text text-wrap"><strong>Email:</strong> {{ locales.email }}</p>
+            <span><strong>Fecha de Suscripción:</strong> {{ locales.created_at | date:'dd/MM/yyyy HH:mm' }} </span><br>   
+
+            <!-- Iconos flotantes -->
+            <div class="position-absolute bottom-0 end-0 p-2">
+              <button class="btn btn-outline-warning m-1"   (click)="crearUsuario()" >
+                <i class="bi bi-pencil-fill"></i>
+              </button>
+              <button class="btn btn-outline-danger m-1" (click)="getUsuarios()">
+                <i class="bi bi-trash-fill"></i>
+              </button>
+              <div class="btn btn-outline-info" (click)="getUsuarios()">
+                <!-- <svg *ngIf="!locales.alquilado && locales.habilitado" class="text-info" width="16" height="16"
+                  fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.726 0H10.5C8.044 0 6.7 1.25 6.7 3.3V5.3H4.5a.5.5 0 0 0-.5.5v3.1a.5.5 0 0 0 .5.5H6.7v8.3a.5.5 0 0 0 .5.5h3.2a.5.5 0 0 0 .5-.5V9.4h2.4a.5.5 0 0 0 .5-.5V5.8a.5.5 0 0 0-.5-.5H10.9V3.7c0-.6.1-.9.9-.9h1.9a.5.5 0 0 0 .5-.5V.5a.5.5 0 0 0-.5-.5z" />
+                </svg> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

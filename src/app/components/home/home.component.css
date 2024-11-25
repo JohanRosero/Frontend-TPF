@@ -1,0 +1,39 @@
+.fondo {
+    background-image: url("../../../assets/—Pngtree—young\ hacker\ programmer\ expert\ coder_15744607.png"), linear-gradient(to top, transparent, white);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-origin: border-box;
+    height: 80vh;
+    margin-bottom: 2vh;
+}
+
+.programer {
+    border-radius: 50%;
+    height: 24vh;
+    width: 24vh;
+    margin: auto;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animacion {
+    animation: miAnimacion 2s infinite ease-in-out;
+}
+
+
+@keyframes miAnimacion {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
