@@ -6,7 +6,7 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 @Component({
   selector: 'app-users',
   standalone: true,
-  imports: [CommonModule,RouterLink],
+  imports: [CommonModule, RouterLink],
   templateUrl: './users.component.html',
   styleUrl: './users.component.css'
 })
@@ -35,6 +35,18 @@ export class UsersComponent {
       },
       error: (error) => {
         console.error('No se puede acceder a los datos', error);
+      }
+    })
+  }
+
+  deleteUsuario(id: string): void {
+    this.usersService.deleteUsuario(id).subscribe({
+      next: (response) => {
+        this.getUsuarios();
+        this.router.navigate([this.router.url]);
+      },
+      error: (error) => {
+        console.error('No se puede eliminar el usuario', error);
       }
     })
   }
