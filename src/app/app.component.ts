@@ -10,7 +10,7 @@ import { FormUserComponent } from './components/form-user/form-user.component';
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [HeaderComponent, FooterComponent, UsersComponent,RouterOutlet,FormUserComponent]
+  imports: [HeaderComponent, FooterComponent, UsersComponent,RouterOutlet, FormUserComponent]
 })
 export class AppComponent {
   title = 'Frontend-TPF';
