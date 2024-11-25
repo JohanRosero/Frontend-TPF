@@ -18,4 +18,32 @@ export class UsersService {
 
     return this.http.get(this.urlBase, httpOptions);
   }
+
+  public getUsuario(id: string): Observable<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({})
+    }
+    return this.http.get(`${this.urlBase}/${id}`, httpOptions);
+  }
+
+  public createUsuario(usuario: any): Observable<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({})
+    }
+    return this.http.post(this.urlBase, usuario, httpOptions);
+  }
+
+  public updateUsuario(id: string, usuario: any): Observable<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({})
+    }
+    return this.http.put(`${this.urlBase}/${id}`, usuario, httpOptions);
+  }
+
+  public deleteUsuario(id: string): Observable<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({})
+    }
+    return this.http.delete(`${this.urlBase}/${id}`, httpOptions);
+  }
 }
