@@ -28,6 +28,10 @@ export class UsersComponent {
     this.router.navigate(['/usersForm', '']);
   }
 
+  editarUsuario(id: number): void {
+    this.router.navigate(['/usersForm', id]);
+  }
+
   getUsuarios(): void {
     this.usersService.getUsuarios().subscribe({
       next: (data) => {
@@ -35,6 +39,18 @@ export class UsersComponent {
       },
       error: (error) => {
         console.error('No se puede acceder a los datos', error);
+      }
+    })
+  }
+
+  eliminarUsuario(id: number): void {
+    this.usersService.deleteUsuario(id).subscribe({
+      next: (data) => {
+        this.getUsuarios();
+        this.router.navigate(['/users']);
+      },
+      error: (error) => {
+        console.error('No se puede eliminar el usuario', error);
       }
     })
   }

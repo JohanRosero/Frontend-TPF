@@ -1,17 +1,29 @@
-.color {
-    background: -webkit-linear-gradient(117deg, #167986, #f07612);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(117deg, #057478, #fa9932);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.minav{
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    background: linear-gradient(117deg, #0b595c,#ba7327 ,#1f1e1d);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: #1f1e1d 0px 0px 10px;
 }
 
-strong {
-    color: #f2f4f8;
-    font-family: monospace, Geneva, Tahoma, sans-serif;
-    font-size: 5vh;
+.logo{
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;    
 }
-img:hover{
-    transform: scale(1.1);
-    transition: 0.3s;
-    cursor: pointer;    
+
+.navbarme a{
+    font-size: 1.15rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+    text-decoration: none;
 }

@@ -6,13 +6,20 @@
     background-origin: border-box;
     height: 80vh;
     margin-bottom: 2vh;
+    margin-top: -10vh;
+    z-index: -100;
+}
+
+.names{
+    padding-top: 5vh;
 }
 
 .programer {
     border-radius: 50%;
-    height: 24vh;
-    width: 24vh;
+    height: 36vh;
+    width: 36vh;
     margin: auto;
+    z-index: 100;
 }
 
 .centered {

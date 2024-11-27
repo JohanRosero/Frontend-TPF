@@ -16,7 +16,7 @@ export class HeaderComponent {
   ngOnInit(): void {
   }
 
-  crearPropietario(): void {
+  crearUsuario(): void {
     this.router.navigate(['/usersForm', '']);
   }
 

@@ -35,12 +35,14 @@ export class UsersService {
 
   public updateUsuario(id: string, usuario: any): Observable<any> {
     const httpOptions = {
-      headers: new HttpHeaders({})
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'        
+      })
     }
-    return this.http.put(`${this.urlBase}/${id}`, usuario, httpOptions);
+    return this.http.put(this.urlBase+"/"+id, usuario, httpOptions);
   }
 
-  public deleteUsuario(id: string): Observable<any> {
+  public deleteUsuario(id: any): Observable<any> {
     const httpOptions = {
       headers: new HttpHeaders({})
     }
